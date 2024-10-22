@@ -7,6 +7,7 @@ import {
   increaseQuantity,
 } from "../../redux/orebiSlice";
 
+
 const ItemCard = ({ item }) => {
   const dispatch = useDispatch();
   return (
