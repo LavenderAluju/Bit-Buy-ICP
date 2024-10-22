@@ -1,27 +1,24 @@
 {
-  "canisters": {
-    "bit_buy_icp_backend": {
-      "candid": "src/bit_buy_icp_backend/bit_buy_icp_backend.did",
-      "package": "bit_buy_icp_backend",
-      "type": "rust"
+    "canisters": {
+        "bit_buy_icp_backend": {
+            "candid": "src/bit_buy_icp_backend/bit_buy_icp_backend.did",
+            "package": "bit_buy_icp_backend",
+            "type": "rust"
+        },
+        "bit_buy_icp_frontend": {
+            "source": [
+                "src/bit_buy_icp_frontend/dist"
+            ],
+            "type": "assets",
+            "workspace": "bit_buy_icp_frontend"
+        }
     },
-    "bit_buy_icp_frontend": {
-      "dependencies": [
-        "bit_buy_icp_backend"
-      ],
-      "source": [
-        "src/bit_buy_icp_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "bit_buy_icp_frontend"
-    }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
-    }
-  },
-  "output_env_file": ".env",
-  "version": 1
+    "defaults": {
+        "build": {
+            "args": "",
+            "packtool": ""
+        }
+    },
+    "output_env_file": ".env",
+    "version": 1
 }
