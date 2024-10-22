@@ -1,0 +1,44 @@
+{
+    "name": "bit_buy_icp_frontend",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "setup": "npm i && dfx canister create bit_buy_icp_backend && dfx generate bit_buy_icp_backend && dfx deploy",
+        "start": "vite --port 3000",
+        "prebuild": "dfx generate",
+        "build": "tsc && vite build",
+        "format": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx,css,scss}\""
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.9.2",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "framer-motion": "^8.0.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "@dfinity/agent": "^1.4.0",
+        "@dfinity/candid": "^1.4.0",
+        "@dfinity/principal": "^1.4.0",
+        "react-paginate": "^8.1.4",
+        "react-redux": "^8.0.5",
+        "react-router-dom": "^6.6.0",
+        "react-scripts": "5.0.1",
+        "react-slick": "^0.29.0",
+        "redux-persist": "^6.0.0",
+        "slick-carousel": "^1.8.1",
+        "tailwind-scrollbar": "^2.1.0",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.6",
+        "@vitejs/plugin-react": "^4.0.1",
+        "dotenv": "^16.3.1",
+        "sass": "^1.63.6",
+        "typescript": "^5.1.3",
+        "vite": "^4.3.9",
+        "vite-plugin-environment": "^1.1.3"
+    }
+}

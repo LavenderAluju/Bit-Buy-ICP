@@ -1,0 +1,22 @@
+type PropertyType = variant {
+    RealEstate;
+    Car;
+    Art;
+    Other: text;
+};
+
+type Property = record {
+    id: text;
+    property_type: PropertyType;
+    image_hash: text;
+    description: text;
+
+    owner: text;
+};
+
+service : {
+    upload_property: (text, PropertyType, vec nat8, text, text) -> (text);
+    get_properties: () -> (vec record { text; PropertyType; text });
+    get_property_by_id: (text) -> (opt Property);
+    delete_property: (text) -> (bool);  // Optional, depends on whether deletion functionality is required
+}

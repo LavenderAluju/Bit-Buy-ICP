@@ -1,0 +1,18 @@
+[package]
+name = "bit_buy_icp_backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"
+hex = "0.4.3"
+ic-cdk = "0.16"
+ic-cdk-macros = "0.16.0"
+ic-cdk-timers = "0.10" # Feel free to remove this dependency if you don't need timers
+serde = { version = "1.0.212", features = ["derive"] }
+sha2 = "0.10.8"
