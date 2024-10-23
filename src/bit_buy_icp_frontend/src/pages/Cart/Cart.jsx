@@ -6,7 +6,6 @@ import Breadcrumbs from "../../components/pageProps/Breadcrumbs";
 import { resetCart } from "../../redux/orebiSlice";
 import { emptyCart } from "../../assets/images/index";
 import ItemCard from "./ItemCard";
-import { createActor } from "../../../declarations/bit_buy_icp_backend";
 
 const Cart = () => {
   const dispatch = useDispatch();
